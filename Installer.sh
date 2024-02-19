@@ -6,11 +6,10 @@
 
 function presentation ()
 {
-	echo " ================================= "
-	echo " Instalador de dotfiles FernuDev   "
-	echo " ================================= "
-
+	
 }
+
+
 
 presentation
 
