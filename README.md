@@ -15,14 +15,15 @@
 
 ## Introducción
 
-Estos dotfiles están diseñados para la personalización de sistemas Hyprlan, proporcionando una configuración optimizada para diversos entornos y aplicaciones. ¡Aprovecha al máximo tu experiencia con Hyprlan!
+Estos dotfiles están diseñados para la personalización de sistemas Hyprland, proporcionando una configuración optimizada para diversos entornos y aplicaciones. ¡Aprovecha al máximo tu experiencia con Hyprlan!
 
 ## Requisitos
 
 Asegúrate de tener instalados los siguientes requisitos antes de utilizar estos dotfiles:
 
-- Hyprlan (versión X.X.X)
+- Hyprland 
 - Git
+- Kitty Terminal
 
 ## Instalación
 
@@ -54,13 +55,16 @@ Estos dotfiles incluyen enlaces y scripts de instalación para las siguientes he
 
 - Zsh
 - Oh-My-Zsh
-- [Otras herramientas aquí]
+- zsh-pluggins
 
 ## Plugins para Neovim
 
 Mejora tu experiencia de edición de texto con los siguientes plugins para Neovim:
 
-- [Lista de plugins aquí]
+- nvim-lualine
+- nvim-tree
+- navarasu/onedark
+- catppucci
 
 ## Contribuciones
 
@@ -68,8 +72,8 @@ Mejora tu experiencia de edición de texto con los siguientes plugins para Neovi
 
 ## Licencia
 
-Este proyecto está licenciado bajo [nombre de la licencia]. Consulta el archivo LICENSE para más detalles.
+Este proyecto está licenciado bajo GLP. Consulta el archivo LICENSE para más detalles.
 
 ---
 
-¡Esperamos que disfrutes utilizando estos dotfiles en tu sistema Hyprlan! Si tienes alguna pregunta o sugerencia, no dudes en contactarnos. ¡Happy hacking!
+¡Esperamos que disfrutes utilizando estos dotfiles en tu sistema Hyprland! Si tienes alguna pregunta o sugerencia, no dudes en contactarme. ¡Happy hacking!
