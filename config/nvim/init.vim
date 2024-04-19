@@ -9,6 +9,13 @@ set encoding=utf-8
 set showmatch
 set relativenumber
 
+set expandtab
+set tabstop=4
+set shiftwidth=0
+set softtabstop=0
+set autoindent
+set smarttab
+
 call plug#begin()
 	Plug 'nvim-lualine/lualine.nvim'
 	Plug 'nvim-tree/nvim-web-devicons'
