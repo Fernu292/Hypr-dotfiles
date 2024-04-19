@@ -36,7 +36,7 @@ Asegúrate de tener instalados los siguientes requisitos antes de utilizar estos
 2. Navega al directorio del proyecto:
 
     ```bash
-    cd hyprlan-dotfiles
+    cd hyprland-dotfiles
     ```
 
 3. Ejecuta el script de instalación:
