@@ -1,7 +1,8 @@
 #
-# Instalador para configurar los dotfiles de 
-# BSPWM y gestionar todas las aplicaciones necesarias
 #
+# Instalador para configurar los dotfiles de 
+# Ubuntu 24.04 y configuracion de terminal aplicaciones
+# y demas programas
 #
 
 function presentation
