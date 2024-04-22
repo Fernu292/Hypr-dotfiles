@@ -1,14 +1,15 @@
 #
 #
 # Instalador para configurar los dotfiles de 
-# Ubuntu 24.04 y configuracion de terminal aplicaciones
+# Arch Linux y configuracion de terminal aplicaciones
 # y demas programas
+#
 #
 
 function presentation
 {
 	echo -e "\n\t=== === === === === === === === === === ==="
-	echo -e "\t=== DotFiles FernuDev 0.01 Arch Linux =="
+	echo -e "\t===   DotFiles FernuDev 0.01 Arch Linux   ==="
 	echo -e "\t=== === === === === === === === === === ===\n\n"
 }
 
@@ -66,6 +67,8 @@ sudo pacman -Syu
 # Install development tools
 sudo pacman -S gcc g++ git curl neovim kitty
 sudo pacman -S zsh
+
+echo -e "\n\tCambiando la shell basica por zsh"
 
 chsh -s $(which zsh)
 
