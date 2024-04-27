@@ -87,6 +87,9 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 # Eza intallation
 sudo pacman -S eza
 
+# fastfetch installation
+sudo pacman -S fastfetch
+
 # Install vimplug for plugins
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
