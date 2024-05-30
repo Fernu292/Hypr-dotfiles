@@ -13,7 +13,7 @@ function presentation
 	echo -e "\t=== === === === === === === === === === ===\n\n"
 }
 
-function copyFiles
+function copyFilesNvim
 {
     # Check if nvim directory exist
     if [ -d "$HOME/.config/nvim" ]; then
@@ -59,6 +59,15 @@ function copyFiles
     fi
 }
 
+
+function installHyprland {
+    sudo pacman -S hyprland rofi waybar
+    yay -S swww
+    # Copy hyprland files
+    
+    cp config/hypr/* $HOME/.config/hypr
+}
+
 presentation
 
 # Updating system Arch
@@ -95,4 +104,5 @@ sudo pacman -S fastfetch
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-copyFiles
+copyFilesNvim
+installHyprland

@@ -1,0 +1,257 @@
+* {
+	border: none;
+	border-radius: 10px;
+    font-family: "JetbrainsMono Nerd Font";
+	font-size: 15px;
+	min-height: 10px;
+}
+
+window {}
+
+window#waybar {
+	background-color: #1A1B26;
+    border-radius: 15px;
+    margin-top: 6px;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+    color: transparent;
+	background: transparent;
+}
+
+#workspaces {
+    margin: 6px 6px 6px 6px;  
+	border-radius: 18px;
+	background: #222330;
+	transition: none;
+    padding-left: 12px;
+    padding-right: 6px;
+}
+
+#workspaces button {
+	transition: none;
+	color: #B5E8E6;
+	background: transparent;
+    margin-right: 10px;
+}
+
+#workspaces button.persistent {
+    transition: none;
+    color: #7aa2f7;
+    background: transparent;
+    font-size: 4px;
+}
+
+#workspaces button.empty {
+	color: #583794;
+    font-size: 2px;
+    transition: none;
+    background: transparent;
+}
+
+#workspaces button.active {
+	transition: none;
+	color: #e0af68;
+	background: transparent;
+	font-size: 4px;
+}
+
+#network {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 6px;
+	border-radius: 18px;
+    font-size: 14px;
+    font-weight:bold;
+	transition: none;
+	color: #e0af68;
+	background: #222330;
+}
+
+#pulseaudio {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 6px;
+	border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+	transition: none;
+	color: #F1F1F1;
+	background: #222330;
+}
+
+#battery {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 6px;
+	border-radius: 18px;
+	transition: none;
+    font-size: 14px;
+    font-weight: bold;
+	color: #161320;
+	background: #222330;
+}
+
+#battery.charging, #battery.plugged {
+	color: #161320;
+    background-color: transparent;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #B5E8E0;
+    color: #161320;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #B5E8E0;
+    }
+}
+
+#backlight {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #F8BD96;
+}
+
+#clock {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+    margin-right: 8px;
+	margin-bottom: 6px;
+	border-radius: 18px;
+	transition: none;
+    font-size: 14px;
+    font-weight: bold;
+	color: #F1F1F1;
+	background: #222330;
+}
+
+#memory {
+    margin: 6px 0px 6px 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+	transition: none;
+	color: #F1F1F1;
+	background: #222330;
+}
+
+#disk {	
+    margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 6px;
+	padding-right: 10px;
+	border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+	transition: none;
+	color: #F1F1F1;
+	background: #222330;
+
+}
+
+#cpu {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 6px;
+	padding-right: 10px;
+	border-radius: 18px;
+    font-size: 14px;
+    font-weight: bold;
+	transition: none;
+	color: #F1F1F1;
+	background: #222330;
+}
+
+#tray {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: #B5E8E0;
+	background: #161320;
+}
+
+#custom-launcher {
+	font-size: 18px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 5px;
+	border-radius: 10px;
+	transition: none;
+    color: #7dcfff;
+    background: transparent;
+}
+
+#custom-power {
+	font-size: 20px;
+	margin-top: 6px;
+	margin-left: 8px;
+	margin-right: 8px;
+	padding-left: 10px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #F28FAD;
+}
+
+#custom-updates {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #E8A2AF;
+}
+
+#custom-media {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #F2CDCD;
+}
