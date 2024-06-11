@@ -13,7 +13,7 @@ function presentation
 	echo -e "\t=== === === === === === === === === === ===\n\n"
 }
 
-function copyFilesNvim
+function copyFiles
 {
     # Check if nvim directory exist
     if [ -d "$HOME/.config/nvim" ]; then
@@ -57,52 +57,71 @@ function copyFilesNvim
         echo -e "\n\tNo existe el archivo, copiando ...\n"
         cp home/.zshrc $HOME/
     fi
+
+    # Copy hyprland files
+    # Check if hypr directory exist
+    if [ -d "$HOME/.config/hypr" ]; then
+        echo -e "\n\tExiste el directorio hypr...\n\tCopiando archivos\n"
+        cp config/hypr/* $HOME/.config/hypr
+    else
+        echo -e "\n\tEl directorio no existe...\n\tCreandolo...\n"
+        mkdir $HOME/.config/hypr
+        cp config/hypr/* $HOME/.config/hypr
+    fi
+    # Check if waybar directory exist
+    if [ -d "$HOME/.config/waybar" ]; then
+        echo -e "\n\tExiste el directorio waybar...\n\tCopiando archivos\n"
+        cp config/waybar/* $HOME/.config/waybar
+    else
+        echo -e "\n\tEl directorio no existe...\n\tCreandolo...\n"
+        mkdir $HOME/.config/waybar
+        cp config/waybar/* $HOME/.config/waybar/
+    fi
+
+    # Check if fastfatch directory exist
+    if [ -d "$HOME/.config/fastfetch" ]; then
+        echo -e "\n\tExiste el directorio fastfetch...\n\tCopiando archivos\n"
+        cp config/fastfetch/* $HOME/.config/fastfetch/
+    else
+        echo -e "\n\tEl directorio no existe...\n\tCreandolo...\n"
+        mkdir $HOME/.config/fastfetch
+        cp config/fastfetch/* $HOME/.config/fastfetch/
+    fi
+    
+
 }
 
 
-function installHyprland {
-    sudo pacman -S hyprland rofi waybar
-    yay -S swww
-    # Copy hyprland files
-    
-    cp config/hypr/* $HOME/.config/hypr
+function installDependencies 
+{
+    echo -e "\n\tInstalando Dependencias"
+    sudo pacman -Syu
+    sudo pacman -S hyprland rofi waybar fastfetch gcc g++ git curl neovim kitty ranger thunar zsh eza
+    yay -S swww waypaper
+
+    # Install oh-my-zsh and plugins
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    # Autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+    # Syntax
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+    # History
+    git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 }
 
 presentation
 
-# Updating system Arch
-sudo pacman -Syu 
-
-# Install development tools
-sudo pacman -S gcc g++ git curl neovim kitty
-sudo pacman -S zsh
+installDependencies
 
 echo -e "\n\tCambiando la shell basica por zsh"
 
 chsh -s $(which zsh)
 
-# Install oh-my-zsh and plugins
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# Syntax
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# History
-git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-
-# Eza intallation
-sudo pacman -S eza
-
-# fastfetch installation
-sudo pacman -S fastfetch
-
-# Install vimplug for plugins
-
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
 copyFilesNvim
-installHyprland
