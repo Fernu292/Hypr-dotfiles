@@ -96,7 +96,14 @@ function installDependencies
 {
     echo -e "\n\tInstalando Dependencias"
     sudo pacman -Syu
-    sudo pacman -S hyprland rofi waybar fastfetch gcc g++ git curl neovim kitty ranger thunar zsh eza
+    sudo pacman -S hyprland rofi waybar fastfetch gcc git curl neovim kitty ranger thunar zsh eza
+    
+    # Install yay 
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si 
+    
+    # Install AUR packages
     yay -S swww waypaper
 
     # Install oh-my-zsh and plugins
@@ -124,4 +131,3 @@ echo -e "\n\tCambiando la shell basica por zsh"
 
 chsh -s $(which zsh)
 
-copyFilesNvim
