@@ -8,7 +8,7 @@
 
 	"modules-left": ["custom/launcher","cpu","memory","disk"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["network","pulseaudio", "battery","clock"],
+	"modules-right": ["network","pulseaudio", "battery","clock","custom/power"],
 	
 
     // Sourced modules
@@ -118,12 +118,12 @@
     },
     "custom/launcher":{
         "format": " ",
-        "on-click": "$HOME/.config/rofi/launchers/type-6/launcher.sh",
+        "on-click": "rofi -show drun",
         "on-click-right": "killall rofi"
     },
     "custom/power":{
-        "format": " ",
-        "on-click": "bash ~/.config/rofi/leave/leave.sh",
+        "format": "<span color='#f7768e'>⏻</span>",
+        "on-click": "wlogout",
     },
     "custom/updates":{
         "format": "{} Update(s)",
