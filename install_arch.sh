@@ -19,18 +19,18 @@ function copyFiles
     if [ -d "$HOME/.config/nvim" ]; then
         # Check if init.vim exist
         echo -e "\n\tExiste el directorio nvim"
-        if [ -f "$HOME/.config/nvim/init.vim" ]; then
-            echo -e "\tExiste el archivo init.vim"
-            cp $HOME/.config/nvim/init.vim $HOME/.config/nvim/backup.vim
-            cp config/nvim/init.vim $HOME/.config/nvim/init.vim
+        if [ -f "$HOME/.config/nvim/init.lua" ]; then
+            echo -e "\tExiste el archivo init.lua"
+            cp $HOME/.config/nvim/init.lue $HOME/.config/nvim/backup.lua
+            cp config/nvim/init.lua $HOME/.config/nvim/init.lua
         else
             echo -e "\n\tNo existe el archivo creando copiando ...\n"
-            cp config/nvim/init.vim $HOME/.config/nvim/
+            cp config/nvim/init.lue $HOME/.config/nvim/
         fi
     else
         echo -e "\n\tEl directorio no existe copiando ...\n"
 	mkdir $HOME/.config/nvim
-        cp config/nvim/init.vim $HOME/.config/
+        cp config/nvim/init.lua $HOME/.config/
     fi
 
     # Check if kitty directory exist
@@ -117,9 +117,6 @@ function installDependencies
 
     # History
     git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 }
 
