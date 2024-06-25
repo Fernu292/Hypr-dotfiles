@@ -2,7 +2,7 @@
 <br>  
 
 ## Dotfiles para Personalizar tu Sistema Hyprland
-¡Bienvenido a los dotfiles de Hyprland! Esta colección de archivos de configuración está diseñada para personalizar tu sistema y optimizar tu experiencia con Hyprlan. Aunque actualmente se encuentra en la versión 0.01, estamos trabajando constantemente para mejorar y añadir nuevas características.
+¡Bienvenido a los dotfiles de Hyprland! Esta colección de archivos de configuración está diseñada para personalizar tu sistema y optimizar tu experiencia con Hyprland. Aunque actualmente se encuentra en la versión 0.01, estamos trabajando constantemente para mejorar y añadir nuevas características.
 
 </br>
 
