@@ -96,7 +96,7 @@ function installDependencies
 {
     echo -e "\n\tInstalando Dependencias"
     sudo pacman -Syu
-    sudo pacman -S hyprland rofi waybar fastfetch gcc git curl neovim kitty ranger thunar zsh eza
+    sudo pacman -S hyprland rofi waybar fastfetch gcc git curl neovim kitty ranger thunar zsh eza dosfstools ntfsprogs nwg-look
     
     # Install yay 
     git clone https://aur.archlinux.org/yay.git
