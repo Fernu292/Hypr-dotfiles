@@ -80,7 +80,7 @@ Mejora tu experiencia de edición de texto con los siguientes plugins para Neovi
 
 ## Licencia
 
-Este proyecto está licenciado bajo GLP. Consulta el archivo LICENSE para más detalles.
+Este proyecto está licenciado bajo GPL. Consulta el archivo LICENSE para más detalles.
 
 ---
 
